@@ -3,6 +3,8 @@
 //getting all field vairables
 const fahrenheitField = document.getElementById("fahrenheitField");
 const celciusField = document.getElementById("celciusField");
+const errorMessage = document.getElementById("errorMessage");
+
 
 //getting all button variables
 const convertBtn = document.getElementById("convertBtn");
@@ -23,10 +25,17 @@ resetBtn.onclick = onResetBtnClicked;
 
 function onConvertBtnClicked(){
 
-    let fahrenheit = fahrenheitField.value;
-    let celcius = (fahrenheit - 32) * (5/9);
 
-    celciusField.value = celcius;
+    if(isNaN(Number(fahrenheitField.value))){
+        errorMessage.innerHTML = "Please input a number";
+    }
+
+    else{
+        let fahrenheit = fahrenheitField.value;
+        let celcius = (fahrenheit - 32) * (5/9);
+    
+        celciusField.value = celcius;
+    }
 
 }
 
