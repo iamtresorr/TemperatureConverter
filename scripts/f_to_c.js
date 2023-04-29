@@ -31,6 +31,7 @@ function onConvertBtnClicked(){
     }
 
     else{
+        errorMessage.innerHTML="";
         let fahrenheit = fahrenheitField.value;
         let celcius = (fahrenheit - 32) * (5/9);
     

@@ -29,10 +29,11 @@ function onConvertBtnClicked(){
     }
 
     else{
+        errorMessage.innerHTML="";
         let celcius = celciusField.value;
         let fahrenheit = (celcius *  (9/5)) + 32;
-    
         fahrenheitField.value = fahrenheit;
+
     }
 
 
